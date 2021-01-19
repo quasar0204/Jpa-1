@@ -1,6 +1,8 @@
 package jpabook.jpashop.domain;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -12,6 +14,8 @@ import static javax.persistence.FetchType.*;
 @Entity
 @Table(name = "orders")
 @Data
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+
 public class Order {
 
     @Id
